@@ -1,0 +1,4 @@
+num_nodes: 28
+emissions: data/interim/eu_emi.csv
+dataset: EU
+input_dim: 20

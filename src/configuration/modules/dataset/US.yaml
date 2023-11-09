@@ -1,0 +1,4 @@
+num_nodes: 51
+emissions: data/interim/us_emi.csv
+dataset: US
+input_dim: 20

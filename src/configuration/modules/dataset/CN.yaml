@@ -1,0 +1,4 @@
+num_nodes: 31
+emissions: data/interim/emissions.csv
+dataset: CN
+input_dim: 22

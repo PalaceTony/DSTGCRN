@@ -1,0 +1,67 @@
+seed: 42
+
+# data
+# num_nodes: 28 For EU, 31 for CN, 51 for US
+
+val_ratio: 0.1
+test_ratio: 0.1
+
+normalizer: std # None
+normalizd_col: 3
+column_wise: True
+
+# model:
+lag: 7
+horizon: 2
+
+input_dim: 20
+output_dim: 1
+
+embed_dim: 32
+rnn_units: 64
+num_layers: 1
+cheb_k: 3
+
+# GRU layer
+hidden_dim_node: 16
+num_layers_node: 1
+
+# attention layer
+num_heads: 2
+# train:
+loss_func: mse
+
+batch_size: 32
+epochs: 10
+
+lr_init: 4.225775196829383e-05
+lr_decay: False
+lr_decay_rate: 0.001
+lr_decay_step: 150, 200
+
+early_stop: True
+early_stop_patience: 60
+
+# dir
+hydra:
+  run:
+    dir: outputs/DSTGCRN/${now:%m-%d_%H-%M-%S}
+log_dir: outputs/DSTGCRN/${now:%m-%d_%H-%M-%S}
+
+defaults:
+  - dataset: CN
+
+tmp: data/interim/ordered_province_daily.csv
+aqi: data/interim/aqi.csv
+save_arrays_EDA: False
+
+device: cuda:0
+log_step: 20
+
+# Albation study
+TNE: False # Time Specific (naive solution)
+dynamic_embed: True # Static or not
+attention_layer: True # Attention layer in the dynamic module -> w/o Attention
+gru_layer: True # GRU layer in the dynamic module -> w/o GRU
+saved_model_path: # outputs/DSTGCRN/06-29_11-08-05_DSTGCRN_1d_test_seed42/best_model.pth
+
