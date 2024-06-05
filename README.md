@@ -44,6 +44,7 @@ For any inquiries or further discussions, feel free to reach out at [mgong081@co
 
 If you find this work useful, please cite the following paper:
 
+```
 @article{gong2024dynamic,
   title={Dynamic spatial-temporal model for carbon emission forecasting},
   author={Gong, Mingze and Zhang, Yongqi and Li, Jia and Chen, Lei},
@@ -52,5 +53,6 @@ If you find this work useful, please cite the following paper:
   year={2024},
   publisher={Elsevier}
 }
+```
 
 This paper is available at https://www.sciencedirect.com/science/article/pii/S0959652624020298
